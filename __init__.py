@@ -10,7 +10,7 @@ Logger = getLogger(__name__)
 
 class NurseDemoSkill(MycroftSkill):
     def __init__(self):
-        super(NurseDemoSkill, self).__init__(name="NurseDemo")
+        super(NurseDemoSkill, self).__init__(name="NurseDemoSkill")
 
         def initialize(self):
 
@@ -33,28 +33,28 @@ class NurseDemoSkill(MycroftSkill):
     # It is now necessary to define methods that handle each of the Intents
 
     def handle_where_am_i_intent(self, message):
-#        self.speak_dialog("whereami")
+       self.speak_dialog("whereami")
 
-#    def handle_the_nurse_is_intent(self, message):
-#        self.speak_dialog("whoisthenurse")
+    def handle_the_nurse_is_intent(self, message):
+        self.speak_dialog("whoisthenurse")
 
-#    def handle_the_doctor_is_intent(self, message):
-#        self.speak_dialog("whoisthedoctor")
+    def handle_the_doctor_is_intent(self, message):
+        self.speak_dialog("whoisthedoctor")
 
-#    def handle_go_home_intent(self, message):
-#            self.speak("releaserequest")
+    def handle_go_home_intent(self, message):
+            self.speak("releaserequest")
 
-#    def handle_diet_intent(self, message):
-#        self.speak_dialog("dietupdate")
-#
-#    def handle_medication_intent(self, message):
-#        self.speak_dialog("medicationupdate")
+    def handle_diet_intent(self, message):
+        self.speak_dialog("dietupdate")
 
-#    def handle_doctor_visit_intent(self, message):
-#        self.speak_dialog("doctorroundsupdate")
-#    @intent_file_handler('demo.nurse.intent')
-#    def handle_demo_nurse(self, message):
-#        self.speak_dialog('demo.nurse')
+    def handle_medication_intent(self, message):
+        self.speak_dialog("medicationupdate")
+
+    def handle_doctor_visit_intent(self, message):
+        self.speak_dialog("doctorroundsupdate")
+    @intent_file_handler('demo.nurse.intent')
+    def handle_demo_nurse(self, message):
+        self.speak_dialog('demo.nurse')
 
 def stop(self):
     pass
